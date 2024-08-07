@@ -77,6 +77,11 @@ public abstract class HttpContext
     /// </summary>
     public abstract void Abort();
 
+    /// <summary>
+    /// Gets or sets the <see cref="Http.Endpoint"/> for the current request.
+    /// </summary>
+    public Endpoint? Endpoint { get; set; }
+
     private string DebuggerToString()
     {
         return HttpContextDebugFormatter.ContextToString(this, reasonPhrase: null);
